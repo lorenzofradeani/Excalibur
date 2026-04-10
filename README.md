@@ -32,24 +32,44 @@ Excalibur conducts autonomous security assessments across the entire attack life
 
 ## Architecture
 
-```
-                    Operator
-                       |
-        +--------------+--------------+
-        |              |              |
-    CLI / TUI    Dashboard HUD    MQTT Agents
-        |              |              |
-        +--------------+--------------+
-                       |
-             Orchestration Layer
-      Campaign Engine | Plan Mode | AI Planner
-                       |
-               Core Framework
-   Exploit Registry | Evidence Chain | CVE Engine
-   Grounded Reasoning | Multi-Model Consensus
-                       |
-            Execution Layer
-    Native Exploits | Evasion Engine | C2 Server
+```mermaid
+flowchart TB
+    Op([Operator])
+
+    subgraph Interfaces[Interfaces]
+        direction LR
+        CLI[CLI / TUI]
+        Dash[Dashboard HUD]
+        MQTT[MQTT Agents]
+    end
+
+    subgraph Orchestration[Orchestration Layer]
+        direction LR
+        CE[Campaign Engine]
+        PM[Plan Mode]
+        AP[AI Planner]
+    end
+
+    subgraph CoreFW[Core Framework]
+        direction LR
+        ER[Exploit Registry]
+        EvC[Evidence Chain]
+        CV[CVE Engine]
+        GR[Grounded Reasoning]
+        MC[Multi-Model Consensus]
+    end
+
+    subgraph Execution[Execution Layer]
+        direction LR
+        NE[Native Exploits]
+        EE[Evasion Engine]
+        C2[C2 Server]
+    end
+
+    Op --> Interfaces
+    Interfaces --> Orchestration
+    Orchestration --> CoreFW
+    CoreFW --> Execution
 ```
 
 ## What Makes It Different
