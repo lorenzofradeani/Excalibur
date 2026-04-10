@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Closed%20Source-black?style=for-the-badge" alt="Closed Source">
-  <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="Proprietary">
-  <img src="https://img.shields.io/badge/Access-KYB%2FKYC%20Required-orange?style=for-the-badge" alt="KYB/KYC">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Status-Closed%20Source-black?style=for-the-badge" alt="Closed Source"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="Proprietary"></a>
+  <a href="#access"><img src="https://img.shields.io/badge/Access-KYB%2FKYC%20Required-orange?style=for-the-badge" alt="KYB/KYC"></a>
 </p>
 
 # Excalibur
