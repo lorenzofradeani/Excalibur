@@ -30,48 +30,6 @@ Excalibur conducts autonomous security assessments across the entire attack life
 - **CVE Intelligence** — Deterministic vulnerability matching against NVD, CISA KEV, and EPSS data. Automatic exploit chain generation prioritized by real-world exploitation probability
 - **Cross-Platform** — Core framework operates on Linux, macOS, and Windows. Agents run in Docker containers
 
-## Architecture
-
-```mermaid
-flowchart TB
-    Op([Operator])
-
-    subgraph Interfaces[Interfaces]
-        direction LR
-        CLI[CLI / TUI]
-        Dash[Dashboard HUD]
-        MQTT[MQTT Agents]
-    end
-
-    subgraph Orchestration[Orchestration Layer]
-        direction LR
-        CE[Campaign Engine]
-        PM[Plan Mode]
-        AP[AI Planner]
-    end
-
-    subgraph CoreFW[Core Framework]
-        direction LR
-        ER[Exploit Registry]
-        EvC[Evidence Chain]
-        CV[CVE Engine]
-        GR[Grounded Reasoning]
-        MC[Multi-Model Consensus]
-    end
-
-    subgraph Execution[Execution Layer]
-        direction LR
-        NE[Native Exploits]
-        EE[Evasion Engine]
-        C2[C2 Server]
-    end
-
-    Op --> Interfaces
-    Interfaces --> Orchestration
-    Orchestration --> CoreFW
-    CoreFW --> Execution
-```
-
 ## What Makes It Different
 
 1. **AI decides, not just suggests.** The AI doesn't autocomplete commands — it reasons through multi-step attack chains, debates each decision, and adapts the plan based on intermediate results.
